@@ -1,5 +1,5 @@
 from flask import Flask, render_template
-from Logic.Band import Band
+from logic.Band import Band
 
 app = Flask(__name__)
 
