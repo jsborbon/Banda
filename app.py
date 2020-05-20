@@ -4,16 +4,17 @@ from Logic.Band import Band
 app = Flask(__name__)
 
 
-@app.route('/banda')
+@app.route('/Mariachi')
 def index():
     b = Band()
-    # return render_template('index.html', b.assignBand())
-    return render_template('index.htm', assignedBand=b.assignBand(), tuneBand=b.tuneBand())
+    # return render_template('Mariachi.html', b.assignBand())
+    return render_template('Mariachi.htm', assignedBand=b.assignBand(), tuneBand=b.tuneBand(), playBand=b.playBand())
 
 
 @app.route('/')
 def prueba():
-    return render_template('prueba.htm')
+    # return render_template('Index.htm')
+    return render_template('Index.htm')
 
 
 if __name__ == "__main__":
