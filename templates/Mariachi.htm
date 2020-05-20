@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style type="text/css" >
+      table,td{
+        border-collapse: collapse;
+        border: 2px solid black;
+        background-color: blanchedalmond;
+      }
+      body{
+        width: 100%;
+        margin-left: 200px;
+
+      } 
+      .center{
+        text-align: justify;
+      }
+    </style>  
+  <title>Mariachi Band</title>
+  </head>
+  <body>
+    <h1><b>Band "El Mariachi feliz"</b></h1>
+    
+    <table>
+      <caption>MUSICIANS LIST</caption>
+      {%for i in range(assignedBand|count)%}
+      <tr>
+        <td colspan="2">
+          <h3>Mariachi {{i+1}}</h3>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <center>{{assignedBand[i]}}</center><p><img src={{ url_for('static',
+          filename=assignedBand[i]+".png") }} alt=instrument /></p>
+        </td>
+        <td>
+          {{tuneBand[i]}}
+        </td>
+      </tr>
+      {%endfor%}
+    </table>
+    
+    {% if playBand %}
+      <p>The mariachi group is playing</p>
+      <audio controls autoplay>
+        <source src={{ url_for('static',
+        filename="sound.mp3") }} type="audio/mpeg">
+      Your browser does not support the audio element.
+      </audio>
+    {% endif %}
+      
+  </body>
+</html>
