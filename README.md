@@ -2,7 +2,8 @@
 
 ![img](static/portada.jpg)
 
-=======
+---
+
 - [**BANDA DE MARIACHIS**](#banda-de-mariachis)
   - [**INTEGRANTES**](#integrantes)
   - [**¿CÓMO EJECUTAR?**](#cómo-ejecutar)
@@ -305,4 +306,3 @@ Esta linea de código nos permite ver los cambios en tiempo real en nuestro serv
 if __name__ == "__main__":
     app.run(debug=True)
 ```
-=======
