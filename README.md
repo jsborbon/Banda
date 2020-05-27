@@ -1,6 +1,7 @@
 # **BANDA DE MARIACHIS**
 
 ![img](static/portada.png)
+
 =======
 - [**BANDA DE MARIACHIS**](#banda-de-mariachis)
   - [**INTEGRANTES**](#integrantes)
