@@ -1,20 +1,18 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mariachi Creator</title>
+    <link href={{ url_for('static', filename='styles/style.css') }}
+    rel="StyleSheet" type="text/css" />
+    <title>Document</title>
   </head>
   <body>
-    <center><h1>Mariachi Band</h1></center>
-    <p>
-      Program for creating a Mariachi band with a random number of musicians
-    </p>
-    <p><img src={{ url_for('static',
-      filename="mariachis.png") }} alt=GroupOfMariachis /></p>
-    </td></p>
-    <p>
-      <center><button><a href="Mariachi">Create band</a></button></center>
-    </p>
+    <center><img src={{ url_for('static', filename='index.png') }} /></center>
+    <input value="Continuar" type="button" onclick="location.href='/Mariachi'" />
+  </body>
+</html>
+  </body>
+</html>
   </body>
 </html>

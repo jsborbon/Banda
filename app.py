@@ -1,20 +1,32 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, session
 from logic.Band import Band
 
+
 app = Flask(__name__)
+app.secret_key = 'This-is-a-real-secret-key'
+b = Band()
+tuneBand = b.tuneBand()
+playBand = b.playBand()
 
 
 @app.route('/Mariachi')
 def index():
-    b = Band()
-    # return render_template('Mariachi.html', b.assignBand())
-    return render_template('Mariachi.htm', assignedBand=b.assignBand(), tuneBand=b.tuneBand(), playBand=b.playBand())
+    assignedBandL = session['Band']
+    tuneBandL = tuneBand
+    return render_template('Mariachi.htm', assignedBand=assignedBandL, tuneBand=tuneBandL)
 
 
 @app.route('/')
 def prueba():
-    # return render_template('Index.htm')
+    session['Band'] = b.assignBand()
     return render_template('Index.htm')
+
+
+@app.route('/Play')
+def play():
+    assignedBandL = session['Band']
+    playBandL = playBand
+    return render_template('playBand.htm', assignedBand=assignedBandL, playBand=playBandL)
 
 
 if __name__ == "__main__":
