@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 from flask import Flask, render_template, session
 from logic.Band import Band
 
