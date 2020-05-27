@@ -1,12 +1,11 @@
-<<<<<<< HEAD
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href={{ url_for('static', filename='styles/style.css') }}
     rel="StyleSheet" type="text/css" />
-    <title>Instruments</title>
+    <title>Tocando...</title>
   </head>
   <body>
     <audio pause autoplay>
@@ -44,50 +43,3 @@
     <input value="Crear nueva banda" type="button" onclick="location.href='/'" />
   </body>
 </html>
-=======
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href={{ url_for('static', filename='styles/style.css') }}
-    rel="StyleSheet" type="text/css" />
-    <title>Instruments</title>
-  </head>
-  <body>
-    <audio pause autoplay>
-      controls audio <source src={{ url_for('static', filename="sound.mp3") }}
-      type="audio/mpeg"> Your browser does not support the audio element.
-    </audio>
-    <center>
-      <div>
-        <tr>
-          <td><h1>Mariachis are playing</h1></td>
-        </tr>
-      </div>
-    </center>
-    {%for i in range(assignedBand|count)%}
-    <center>
-      <table>
-        <tr>
-          <td colspan="2">
-            <h2>Mariachi {{i+1}}</h2>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <img src={{ url_for('static', filename=assignedBand[i]+".png") }} />
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <h3>{{playBand[i]}}</h3>
-          </td>
-        </tr>
-      </table>
-    </center>
-    {%endfor%}
-    <input value="Crear nueva banda" type="button" onclick="location.href='/'" />
-  </body>
-</html>
->>>>>>> 1dce1361caed8500093f8aac1a98a176b319de1b
